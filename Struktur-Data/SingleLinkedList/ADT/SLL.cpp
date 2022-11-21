@@ -66,7 +66,6 @@ void deleteAfter(List &L, address prec, address &cur){
         cur = next(prec);
         next(prec) = next(cur);
         next(cur) = nil;
-        
     }
 }
 

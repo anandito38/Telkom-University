@@ -47,6 +47,13 @@ void insertFirst(List &L, address cur){
     }
 }
 
+void insertAfter(List &L, address prec, address cur){
+    if(!isEmpty(L)){
+        next(cur) = next(prec);
+        next(prec) = cur;
+    }
+}
+
 void insertLast(List &L, address cur){
     if(isEmpty(L)){
         first(L) = cur;
@@ -68,6 +75,14 @@ void deleteFirst(List &L, address &cur){
     }else{
         cur = first(L);
         first(L) = next(cur);
+        next(cur) = nil;
+    }
+}
+
+void deleteAfter(List &L, address prec, address &cur){
+    if(!isEmpty(L)){
+        cur = next(prec);
+        next(prec) = next(cur);
         next(cur) = nil;
     }
 }
@@ -102,5 +117,6 @@ void showList(List L){
 }
 
 int main(){
-    
+    List L;
+    createList(L);
 }
