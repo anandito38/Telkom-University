@@ -33,9 +33,6 @@ void insertAfter(List &L, address prec, address cur){
     if(!isEmpty(L)){
         next(cur) = next(prec);
         next(prec) = cur;
-        
-    }else{
-        first(L) = cur;
     }
 }
 
@@ -65,7 +62,12 @@ void deleteFirst(List &L, address &cur){
 }
 
 void deleteAfter(List &L, address prec, address &cur){
-    
+    if(!isEmpty(L)){
+        cur = next(prec);
+        next(prec) = next(cur);
+        next(cur) = nil;
+        
+    }
 }
 
 void deleteLast(List &L, address &cur){
