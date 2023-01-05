@@ -3,6 +3,7 @@
 template code data structure
 
 created by : Anandito Satria Asyraf
-basic skill
+
+*basic skill
 - coding
 - sport
