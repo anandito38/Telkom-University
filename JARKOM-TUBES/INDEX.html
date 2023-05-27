@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TUBES JARKOM</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      padding: 5px;
+      width: 300px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #resultUpper, #resultLower {
+      margin-top: 20px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+
+    .button-container {
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function UbahHurufBesar() {
+      var inputText = document.getElementById("inputText").value;
+      document.getElementById("resultUpper").innerHTML = inputText.toUpperCase();
+    }
+
+    function UbahHurufKecil() {
+      var inputText = document.getElementById("inputText").value;
+      document.getElementById("resultLower").innerHTML = inputText.toLowerCase();
+    }
+  </script>
+</head>
+<body>
+  <h2>TEXT CONVERTER | TUBES JARKOM</h2>
+  <h3>
+    ATILLA FEJRIL           (1301210495)<br>
+    NABILA AURELLIA         (1301213017)<br>
+    ANANDITO SATRIA ASYRAF  (1301213026)<br>
+  </h3>
+
+  <label for="inputText">MASUKAN TEXT :</label>
+  <br>
+  <input type="text" id="inputText" />
+  <br>
+  <div class="button-container">
+    <button onclick="UbahHurufBesar()">UBAH HURUF BESAR</button>
+    <button onclick="UbahHurufKecil()">UBAH HURUF KECIL</button>
+  </div>
+
+  <div id="resultUpper"></div>
+  <div id="resultLower"></div>
+</body>
+</html>
