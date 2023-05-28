@@ -33,7 +33,9 @@ while True :
     except IOError:
         #mengirim pesan bahwa file yang diminta tidak ada
         header = "HTTP/1.1 200 404 not found\nContent-Type: text/html\r\n\r\n"
+        response_body = "<html><head><title>404 Not Found</title></head><body><h1>404 Not Found</h1></body></html>"
         connectionSocket.send(header.encode())
+        connectionSocket.send(response_body.encode())
 
         #menutup client socket
         connectionSocket.close()
